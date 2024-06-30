@@ -28,15 +28,20 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
-function createMarkup(arr) {
+function createList(arr) {
   return arr.map(
     ({ url, alt }) => `
     <li>
-        <img src="${url}" alt="${alt}" width="300">
+        <img src="${url}" alt="${alt}" width="360">
     </li>
 `).join('')
 }
 
-list.insertAdjacentHTML('beforeend', createMarkup(images));
+list.insertAdjacentHTML('beforeend', createList(images));
 
+list.style.listStyle = "none";
+list.style.display = "flex";
+list.style.flexWrap = "wrap";
+list.style.rowGap = "48px";
+list.style.columnGap = "24px";
 
