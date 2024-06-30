@@ -34,10 +34,10 @@ function createList(arr) {
     <li>
         <img src="${url}" alt="${alt}" width="360">
     </li>
-`).join('')
+`).join("")
 }
 
-list.insertAdjacentHTML('beforeend', createList(images));
+list.insertAdjacentHTML("beforeend", createList(images));
 
 list.style.listStyle = "none";
 list.style.display = "flex";
